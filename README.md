@@ -1,2 +1,2 @@
 # Python
-It is my first repository. Some Python programs are written here
+All the Python Programs written by me posted here.
