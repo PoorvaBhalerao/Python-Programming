@@ -1,0 +1,36 @@
+# Accept number from user and display even or odd numbers on screen 
+# parellel execution
+import multiprocessing
+
+def DisplayEven(iNo):
+    print("List of even numbers: ")
+    x = 2
+    for i in range(iNo):
+        print(x)
+        x = x+2
+    
+def DisplayOdd(iNo):
+    print("List of odd numbers: ")
+    x = 1
+    for i in range(iNo):
+        print(x)
+        x = x+2
+
+
+def main():
+    Value = int(input("Enter a number: "))
+
+    p1 = multiprocessing.Process(target = DisplayEven, args = (Value,))     # keyword arguments
+    p2 = multiprocessing.Process(target = DisplayOdd, args = (Value,))      # (value,) is tuple
+
+    p1.start()      # this is not good way of multiprocessing
+    p1.join()       # due to this parellel execution is not working
+
+    p2.start()      # first p1 is executed and then p2
+    p2.join()       # see previous code there is parellel execution
+
+    print("End of main process")
+
+    
+if __name__ == "__main__":
+    main()
