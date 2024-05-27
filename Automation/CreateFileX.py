@@ -15,4 +15,4 @@ if __name__ == "__main__":
     main()
 
 # Absolute path: C:\Users\admin\Desktop\Python\Automation/Marvellous.txt
-# Relative path: Automation/Marvellous.txt
+# Relative path: Automation\Marvellous.txt

@@ -2,10 +2,10 @@
 # Name(___, ___, ....)
 
 
-def Addition(A, B):
-    Ans = 0
-    Ans = A + B
-    return Ans
+# def Addition(A, B):
+#     Ans = 0
+#     Ans = A + B
+#     return Ans
 
 Add = lambda A, B: A + B
 

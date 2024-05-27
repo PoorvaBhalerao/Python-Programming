@@ -1,7 +1,7 @@
 # range(start, end, displacement)
 # start is by default zero if not mentioned
-# displacement is by defaulkt 1 if not mentioned
-# end shouble be mentioned explicitly (It gets excluded)
+# displacement is by default 1 if not mentioned
+# end should be mentioned explicitly (It gets excluded)
 
 Arr = list(range(5))
 

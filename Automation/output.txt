@@ -1,0 +1,24 @@
+------------------------------------------------
+------------Directory Watcher-------------------
+------------------------------------------------
+Deleted file is:  Poorva.txt - Copy (2).txt
+Deleted file is:  Poorva.txt - Copy (3).txt
+Deleted file is:  Poorva.txt - Copy (4).txt
+Deleted file is:  Poorva.txt - Copy.txt
+Deleted file is:  Poorva.txt.txt
+Number of deleted files are:  5
+Time required to execute the script is:  0.0039904117584228516
+------------------------------------------------
+--------Thank you for using our script----------
+------------Marvellous Infosystems--------------
+------------------------------------------------
+------------------------------------------------
+------------Directory Watcher-------------------
+------------------------------------------------
+Deleted file is:  Poorva.txt.txt
+Number of deleted files are:  1
+Time required to execute the script is:  0.001031637191772461
+------------------------------------------------
+--------Thank you for using our script----------
+------------Marvellous Infosystems--------------
+------------------------------------------------
