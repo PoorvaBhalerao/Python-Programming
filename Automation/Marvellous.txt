@@ -1,5 +1,0 @@
-Core Python Programming
-Advance python Programming
-Automations using python
-Data Science
-Machine Learning

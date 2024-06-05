@@ -1,9 +1,0 @@
---------------------------------------
--------Directory File Search----------
---------------------------------------
-Path is not absolute path
-Converted absolute path is:  C:\Users\admin\Desktop\Python\Automation\Demo
-Unable to perform task due to  module 'ntpath' has no attribute 'exits'
---------------------------------------
--------End of Application----------
---------Poorva Bhalerao------------
