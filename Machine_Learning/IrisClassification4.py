@@ -15,6 +15,7 @@ def main():
     #print(type(iris))
 
     Features = iris.data
+    print(Features)
     Labels = iris.target
 
     data_train, data_test, target_train, target_test = train_test_split(Features, Labels, test_size= 0.5)  
