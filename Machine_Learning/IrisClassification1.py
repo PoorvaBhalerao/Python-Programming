@@ -8,7 +8,7 @@ def main():
 
     iris = load_iris()
 
-    #print(iris)
+    print(iris)
 
     #print(type(iris))
 
