@@ -28,48 +28,48 @@ import pandas as pd # type: ignore
 from sklearn.model_selection import train_test_split # type: ignore
 from sklearn.metrics import accuracy_score # type: ignore
 from sklearn.neighbors import KNeighborsClassifier # type: ignore
-from sklearn.tree import DecisionTreeClassifier # type: ignore
 from sklearn.preprocessing import StandardScaler # type: ignore
 
-data = pd.read_csv('WinePredictor.csv')
+def Check_accuracy():
 
-df = pd.DataFrame(data)
-#print(data)
+    data = pd.read_csv('WinePredictor.csv')
 
-Features = df.drop('Class',axis=1)
-#print(Features)
-labels = df['Class'] 
-#print(labels)
+    df = pd.DataFrame(data)
+    print(df.head())
 
-data_train, data_test, target_train, target_test = train_test_split(Features, labels, test_size=0.2)
+    Features = df.drop('Class',axis=1)
+    #print(Features)
+    labels = df['Class'] 
+    #print(labels)
 
-# Standardize features by scaling them
-#Standardize features by removing the mean and scaling to unit variance.
-scaler = StandardScaler()
-data_train_scaled = scaler.fit_transform(data_train)
-data_test_scaled = scaler.transform(data_test)
+    data_train, data_test, target_train, target_test = train_test_split(Features, labels, test_size=0.2)
 
-knn = KNeighborsClassifier(n_neighbors=5)
+    #Standardize features by scaling them
+    #Standardize features by removing the mean and scaling to unit variance.
+    scaler = StandardScaler()
+    data_train_scaled = scaler.fit_transform(data_train)
+    data_test_scaled = scaler.transform(data_test)
 
-# Train the model
-knn.fit(data_train_scaled, target_train)
+    print(df.head())
 
-# Predictions on the test set
-pred = knn.predict(data_test_scaled)
+    knn = KNeighborsClassifier(n_neighbors=5)
 
-# Evaluate the model
-accuracy = accuracy_score(target_test, pred)
-print("Accuracy using K Nearest Neighbour algorithm is: ",accuracy*100,"%")
+    # Train the model
+    knn.fit(data_train_scaled, target_train)
 
+    # Predictions on the test set
+    pred = knn.predict(data_test_scaled)
 
-# obj = DecisionTreeClassifier()
+    # Evaluate the model
+    accuracy = accuracy_score(target_test, pred)
 
-# # Train the model
-# obj.fit(data_train_scaled, target_train)
+    return accuracy
 
-# # Predictions on the test set
-# pred = obj.predict(data_test_scaled)
+def main():
 
-# # Evaluate the model
-# accuracy = accuracy_score(target_test, pred)
-# print("Accuracy using Decision tree algorithm is: ",accuracy*100,"%")
+    Accuracy = Check_accuracy()
+
+    print("Accuracy using K Nearest Neighbour algorithm is: ",Accuracy*100,"%")
+
+if __name__ == "__main__":
+    main()

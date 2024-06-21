@@ -27,43 +27,43 @@ from sklearn.preprocessing import OrdinalEncoder # type: ignore or OneHotEncoder
 from sklearn.metrics import accuracy_score # type: ignore
 
 
+def CheckAccuracy():
 
-data = pd.read_csv("PlayPredictor.csv",index_col=0)
+    data = pd.read_csv("PlayPredictor.csv",index_col=0)
 
-df = pd.DataFrame(data)
+    print(data.head())
 
-# Convert categorical variables to numerical using One-Hot Encoding
-encoder = OrdinalEncoder()
-Features = encoder.fit_transform(df[['Whether', 'Temperature']])
+    # Convert categorical variables to numerical using One-Hot Encoding
+    encoder = OrdinalEncoder()
+    Features = encoder.fit_transform(data[['Whether', 'Temperature']])
 
-# Convert target variable 'play' to numerical
-Labels = df['Play'].apply(lambda x: 1 if x == 'Yes' else 0)
+    # Convert target variable 'play' to numerical
+    Labels = data['Play'].apply(lambda x: 1 if x == 'Yes' else 0)
+
+    print(data.head())
+
+    data_train, data_test, target_train, target_test = train_test_split(Features, Labels, train_size=0.8)
+
+    # knn = KNeighborsClassifier(n_neighbors=3)
+    obj = KNeighborsClassifier()
+
+    obj = obj.fit(data_train, target_train)
+
+    predictions = obj.predict(data_test)
+    #print(predictions)
+
+    Accuracy = accuracy_score(target_test, predictions)
+
+    return Accuracy
+
+    
+def main():
+     
+    Acc = CheckAccuracy()
+
+    print("Accuracy of classification algorithm with K Nearest NEighbour Classifier is: ",Acc*100,"%")
 
 
-#print(df.columns)
-
-data_train, data_test, target_train, target_test = train_test_split(Features, Labels, test_size=0.3)
-
-# knn = KNeighborsClassifier(n_neighbors=3)
-obj = KNeighborsClassifier()
-
-obj = obj.fit(data_train, target_train)
-
-predictions = obj.predict(data_test)
-#print(predictions)
-
-Accuracy = accuracy_score(target_test, predictions)
-
-print("Accuracy of classification algorithm with K Nearest NEighbour Classifier is: ",Accuracy*100,"%")
-
-# obj1 = DecisionTreeClassifier()
-
-# obj1 = obj1.fit(data_train, target_train)
-
-# predictions = obj1.predict(data_test)
-# #print(predictions)
-
-# Accuracy = accuracy_score(target_test, predictions)
-
-# print("Accuracy of classification algorithm with Decision Tree Classifier is: ",Accuracy*100,"%")
+if __name__ == "__main__":
+    main()
 
