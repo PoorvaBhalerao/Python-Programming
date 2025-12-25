@@ -1,15 +1,16 @@
-# Tuple datatype
+# Set datatype
 
 # Heterogeneous
 # Unordered
 # UnIndexed
-# Mutable
+# mutable
 # Duplicate not Allowed
 
 Arr = {11, 18.90, True, "Marvellous",11}
 print(Arr)  # error not came but 11 is printed only once
 
 # print(Arr[0]) #error data is not indexed
+
 
 Arr.add("Python")
 print(Arr)

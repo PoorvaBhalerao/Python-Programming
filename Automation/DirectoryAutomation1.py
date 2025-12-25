@@ -41,7 +41,6 @@ def main():
 
     print("------------------------------------------------")   #Footer
     print("--------Thank you for using our script----------")
-    print("------------Marvellous Infosystems--------------")
     print("------------------------------------------------")
 
 

@@ -13,6 +13,6 @@ print(len(Arr))
 print(Arr[0])
 print(Arr[2])
 
-Arr[0] = 21
+Arr[0] = 21             # tuple is immutable....error
 print(Arr[0])
 

@@ -1,4 +1,4 @@
-# accpet number from user and calculate factorial of that number using 
+# accpet number from user and calculate factorial of that number using recursion
 i = 1
 Fact = 1
 

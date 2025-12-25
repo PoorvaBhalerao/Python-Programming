@@ -127,7 +127,7 @@ def ProcessLog(log_dir = "Marvellous"):
         MailSender(log_path, time.ctime())
         endtime = time.time()
 
-        print("Took %s seconds to send main" %(endtime-starttime))
+        print(f"Took {endtime - starttime:.2f} seconds to send mail")
 
     else:
         print("There is no internet connection")
@@ -149,14 +149,18 @@ def main():
         exit()
 
     try:
-        schedule.every(int(argv[1])).minutes.do(ProcessLog)
+        interval = int(argv[1])
+        if interval <= 0:
+            raise ValueError("The time interval must be positive inteeger.")
+        
+        schedule.every(interval).minutes.do(ProcessLog)
     
         while True:
             schedule.run_pending()
             time.sleep(1)
 
-    except ValueError:
-        print("Error: Invalid datatype of input")
+    except ValueError as e:
+        print(f"Error: {e}")
 
     except Exception as E:
         print("Error: Invalid input",E)

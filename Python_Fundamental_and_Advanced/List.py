@@ -21,7 +21,8 @@ print(Arr[0])
 Arr[0] = 21
 print(Arr[0])
 
-Arr.append(3)       # Mutable
+Arr.append(3)    # Mutable
+print(Arr)   
 print("length of list is: ",len(Arr))
 
 

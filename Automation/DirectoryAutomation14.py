@@ -41,7 +41,7 @@ def main():
 
         if(sys.argv[1] == "--u" or sys.argv[1] == "--U"):
             print("Usage of Script: ")
-            print("Name_Of_File  Name_of_Directory")
+            print("Name_Of_File"  "Extention")
             exit()
 
     if(len(sys.argv) == 3):

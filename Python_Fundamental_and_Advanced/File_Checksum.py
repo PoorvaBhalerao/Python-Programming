@@ -1,6 +1,7 @@
-import sys import *
+import sys
 import os
 import hashlib
+import time
 
 def hashfile(path, blocksize = 1024):
     afile = open(path, 'rb')
@@ -38,7 +39,6 @@ def DisplayChecksum(path):
 
 def main():
     print("------------------------------------------------")   #Banner
-    print("------------Marvellous Infosystem by Piyush Khairnaer-------------------")
     print("------------------------------------------------")
 
     if(len(sys.argv) == 2):     
@@ -54,7 +54,7 @@ def main():
         try:     
             starttime = time.time()
 
-            DirectoryWatcher(sys.argv[1])
+            DisplayChecksum(sys.argv[1])
 
             endtime = time.time()
 
@@ -71,7 +71,6 @@ def main():
 
     print("------------------------------------------------")   #Footer
     print("--------Thank you for using our script----------")
-    print("------------Marvellous Infosystems--------------")
     print("------------------------------------------------")
 
 

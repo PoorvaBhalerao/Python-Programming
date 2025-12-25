@@ -65,7 +65,7 @@ def main():
         exit()
 
     else:
-        print("type 'u' for usage or 'h' for help")
+        print("type '--u' for usage or '--h' for help")
 
     try:    
         arr = DisplayChecksum(argv[1])

@@ -45,7 +45,7 @@ def main():
 
     print("------------------------------------------------")   #Footer
     print("--------Thank you for using our script----------")
-    print("------------Marvellous Infosystems--------------")
+   
 
 
 if __name__ == "__main__":

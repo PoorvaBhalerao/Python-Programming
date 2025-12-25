@@ -47,7 +47,7 @@ def main():
             print("Time required to execute the script is: ", endtime-starttime)
         
         except Exception as obj2:
-            print("Unable tp perform the task due to ",obj2)
+            print("Unable to perform the task due to ",obj2)
     
 
     else:
@@ -57,7 +57,6 @@ def main():
 
     print("------------------------------------------------")   #Footer
     print("--------Thank you for using our script----------")
-    print("------------Marvellous Infosystems--------------")
     print("------------------------------------------------")
 
 

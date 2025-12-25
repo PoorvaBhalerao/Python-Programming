@@ -1,6 +1,6 @@
 
 def main():
-    print("Enter number of elements you want to inser in list:")
+    print("Enter number of elements you want to insert in list:")
     size = int(input())
 
     Arr = list()
